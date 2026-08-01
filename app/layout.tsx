@@ -12,9 +12,9 @@ export async function generateMetadata(): Promise<Metadata> {
     requestHeaders.get("x-forwarded-proto") ??
     (host.startsWith("localhost") ? "http" : "https");
   const baseUrl = `${protocol}://${host}`;
-  const title = "林海相依｜盐城湿地实践成果展";
+  const title = "林海相依｜从盐城湿地观察到港城小微水体治理构想";
   const description =
-    "江苏海洋大学“林海相依”实践团盐城湿地保护与水生态社会实践成果展示。";
+    "江苏海洋大学“林海相依”实践团：盐城两日真实实践、证据边界与连云港小微水体低动力协同治理参考方案。";
 
   return {
     title,
@@ -26,10 +26,10 @@ export async function generateMetadata(): Promise<Metadata> {
       locale: "zh_CN",
       images: [
         {
-          url: `${baseUrl}/og.png`,
-          width: 1730,
-          height: 909,
-          alt: "林海相依·盐城湿地实践成果展",
+          url: `${baseUrl}/og-governance.png`,
+          width: 1729,
+          height: 910,
+          alt: "林海相依·从盐城湿地观察到连云港小微水体治理构想",
         },
       ],
     },
@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: [`${baseUrl}/og.png`],
+      images: [`${baseUrl}/og-governance.png`],
     },
   };
 }
