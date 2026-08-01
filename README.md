@@ -14,3 +14,7 @@
 - GB 3838、HJ 91.2、人工湿地与河湖缓冲带指南等来源链接。
 
 治理模块属于基于公开资料形成的概念参考方案，尚未完成场地勘察、工程设计或实测验证；交互工具只作单指标筛查，不构成水质评级。
+
+## GitHub Pages
+
+运行 `npm run export:pages` 可在仓库根目录生成完整静态网页、前端资源、照片副本、`.nojekyll` 与 `CNAME`。GitHub Pages 从 `main` 分支根目录发布，访问地址为 <https://summerplan.255515.xyz/>。
