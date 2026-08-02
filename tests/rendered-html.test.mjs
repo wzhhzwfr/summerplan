@@ -31,9 +31,11 @@ test("server-renders the complete practice and governance outcome", async () => 
   const html = await response.text();
   assert.match(
     html,
-    /<title>林海相依｜从盐城湿地观察到港城小微水体治理构想<\/title>/,
+    /<title>林海相依｜从盐城湿地观察到港城水网畅想<\/title>/,
   );
-  assert.match(html, /两份样品均未送实验室检测/);
+  assert.match(html, /三张港城照片，三种身边水环境/);
+  assert.match(html, /两份盐城样品未满足规范保存/);
+  assert.match(html, /校园周边河道：照片先提出问题/);
   assert.match(html, /连云港小微水体低动力协同治理参考方案/);
   assert.match(html, /源头减量/);
   assert.match(html, /浅水旁路湿地/);
