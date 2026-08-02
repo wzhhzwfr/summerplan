@@ -23,7 +23,7 @@ async function render() {
   );
 }
 
-test("server-renders the complete practice and governance outcome", async () => {
+test("server-renders the complete practice and outreach outcome", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -31,24 +31,26 @@ test("server-renders the complete practice and governance outcome", async () => 
   const html = await response.text();
   assert.match(
     html,
-    /<title>林海相依｜从盐城湿地观察到港城水网畅想<\/title>/,
+    /<title>林海相依｜盐城湿地实践与港城护水行动<\/title>/,
   );
   assert.match(html, /三张港城照片，三种身边水环境/);
-  assert.match(html, /两份盐城样品未满足规范保存/);
-  assert.match(html, /校园周边河道：照片先提出问题/);
-  assert.match(html, /连云港小微水体低动力协同治理参考方案/);
+  assert.match(html, /把实践收获做成一份数字成果/);
+  assert.match(html, /校园周边河道｜从身边小河开始/);
+  assert.match(html, /连云港小微水体护水构想/);
   assert.match(html, /源头减量/);
-  assert.match(html, /浅水旁路湿地/);
+  assert.match(html, /生态净化/);
   assert.match(html, /沿海或感潮半咸水/);
   assert.match(html, /95\.6%/);
   assert.match(html, /0\.12 mg\/L/);
   assert.match(html, /48\.6%/);
-  assert.match(html, /单指标筛查/);
-  assert.match(html, /如果A—D每组只搭1套/);
+  assert.match(html, /水质指标互动展示/);
+  assert.match(html, /从盐城湿地出发/);
+  assert.doesNotMatch(html, /一段必须说清的方法边界/);
+  assert.doesNotMatch(html, /这只是面向课程展示/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Building your site/);
 });
 
-test("keeps the indicator tool, evidence boundary and metadata wired", async () => {
+test("keeps the indicator tool, positive outcomes and metadata wired", async () => {
   const [page, tool, layout, readme] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/WaterReferenceTool.tsx", import.meta.url), "utf8"),
@@ -58,13 +60,13 @@ test("keeps the indicator tool, evidence boundary and metadata wired", async () 
 
   assert.match(page, /import WaterReferenceTool from "\.\/WaterReferenceTool"/);
   assert.match(page, /<WaterReferenceTool \/>/);
-  assert.match(page, /不代表团队两份水样/);
+  assert.match(page, /水环境宣传网页/);
   assert.match(tool, /^"use client";/);
   assert.match(tool, /湖泊 \/ 水库/);
   assert.match(tool, /waterType === "lake" \? 0\.05 : 0\.2/);
-  assert.match(tool, /不构成水质类别判定/);
+  assert.match(tool, /输入数值，看看它与参考线的关系/);
   assert.match(layout, /\/og-governance\.png/);
-  assert.match(readme, /尚未完成场地勘察、工程设计或实测验证/);
+  assert.match(readme, /监测维护—公众参与/);
 
   await access(new URL("../public/og-governance.png", import.meta.url));
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));

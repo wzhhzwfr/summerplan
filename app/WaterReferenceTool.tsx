@@ -73,8 +73,8 @@ export default function WaterReferenceTool() {
     <div className="reference-tool">
       <div className="reference-tool-head">
         <div>
-          <p className="tool-label">GB 3838—2002 · Ⅲ类单指标参考</p>
-          <h3>把公开数据放进参考线里看</h3>
+          <p className="tool-label">GB 3838—2002 · Ⅲ类指标参考</p>
+          <h3>输入数值，看看它与参考线的关系</h3>
         </div>
         <fieldset className="water-type-switch">
           <legend>选择总磷参考类型</legend>
@@ -154,10 +154,6 @@ export default function WaterReferenceTool() {
           ))}
         </div>
       </div>
-
-      <p className="tool-disclaimer">
-        这只是面向课程展示的单指标筛查，不构成水质类别判定、检测报告或治理验收。正式评价还需要确认水域功能类别、规范布点采样、合格方法与完整质量控制；沿海或感潮半咸水应另按海水、盐度与潮汐条件判断，不能直接套用本工具。
-      </p>
     </div>
   );
 }

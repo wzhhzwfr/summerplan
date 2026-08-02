@@ -1330,7 +1330,7 @@ button:focus-visible {
 .flow-track {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-top: 76px;
   border-top: 1px solid rgba(255, 255, 255, 0.17);
   border-bottom: 1px solid rgba(255, 255, 255, 0.17);
@@ -1460,7 +1460,7 @@ button:focus-visible {
 }
 
 .scenario-card {
-  min-height: 540px;
+  min-height: 310px;
   padding: 34px 32px;
   color: var(--ink);
   background: var(--paper);
@@ -1479,6 +1479,13 @@ button:focus-visible {
   margin-top: 18px;
   font-family: "Noto Serif SC", "Songti SC", STSong, serif;
   font-size: 31px;
+}
+
+.scenario-card > p:last-child {
+  margin-top: 42px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.9;
 }
 
 .scenario-card dl {

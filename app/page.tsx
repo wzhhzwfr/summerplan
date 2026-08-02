@@ -25,7 +25,7 @@ const journey = [
     title: "从自然史走进城市生活史",
     place: "竹林大饭店 · 盐镇水街",
     description:
-      "在竹林大饭店感受老盐城市井文化，随后沿串场河步行、观看水街夜景并复盘首日见闻。两处行程属于城市文化体验，不作为水质采样点。",
+      "在竹林大饭店感受老盐城市井文化，随后沿串场河步行、观看水街夜景，在城市生活中体会水系与地方文化的联系。",
     image: "/water-street.jpg",
     alt: "盐镇水街串场河沿线夜景",
     tags: ["城市水文化", "团队复盘", "地方记忆"],
@@ -47,10 +47,10 @@ const journey = [
     title: "留下两份可追溯的水样记录",
     place: "麋鹿园公共游览区域",
     description:
-      "在工作人员同意下，于景观湖和相邻排水沟各取一份水样，记录来源与过程。样品未送实验室，因此我们不判断水质等级，只保留观察与采样事实。",
-    image: "/water-sampling.jpg",
+      "在工作人员同意下，于景观湖和相邻排水沟各取一份水样，记录来源和采样过程。两处水体状态的差异，让队员开始关注水体交换、岸边环境和日常管理。",
+    image: "/pond-sampling.jpg",
     alt: "队员在景观湖边采集水样",
-    tags: ["规范采样", "过程留痕", "证据边界"],
+    tags: ["水样采集", "过程记录", "问题观察"],
   },
 ];
 
@@ -62,13 +62,13 @@ const insights = [
   },
   {
     index: "B",
-    title: "采样不等于得出结论",
-    text: "没有规范检测，就不把颜色、气味和水面状态写成水质等级。克制也是实践能力的一部分。",
+    title: "现场观察让问题更具体",
+    text: "采访、照片、水样和生境记录，让书本上的水生态知识变成了可以看见、可以讨论的现场经验。",
   },
   {
     index: "C",
-    title: "观察可以继续长成方案",
-    text: "实地问题意识与公开数据、技术指南相结合，可以形成一套可被讨论、后续可验证的本地治理构想。",
+    title: "实践收获可以被分享",
+    text: "我们把路线、影像、公开资料和护水设想做成网页，让更多人看见湿地保护与身边水体的联系。",
   },
 ];
 
@@ -78,11 +78,11 @@ const localObservations = [
     code: "COAST / PORT CITY",
     image: "/lyg-coast.jpg",
     alt: "隔水眺望连云港近岸海域、船舶与港城建筑",
-    title: "近岸海域：把潮汐和盐度放进判断",
+    title: "近岸海域｜记录潮汐与盐度",
     observation:
-      "近岸海域连接港口、城市与山海景观。全市或海湾尺度的公开评价可以提供背景，却不能替代对某一岸段、某一时刻的具体判断。",
+      "连云港的近岸海域连接港口、城市与山海景观，是观察海陆交汇的重要窗口。",
     action:
-      "记录潮位、潮相、降雨与盐度或电导率，关注入海河流和排口；咸淡水交汇场景不直接套用普通淡水参考线。",
+      "关注潮位、盐度和入海河流，逐步形成持续的岸线观察记录。",
     className: "local-observation-card local-observation-wide",
   },
   {
@@ -90,11 +90,11 @@ const localObservations = [
     code: "PUBLIC WATERSPACE",
     image: "/campus-dragon-boat.jpg",
     alt: "校园周边水域开展龙舟活动",
-    title: "公共活动水域：水环境也是校园生活",
+    title: "公共活动水域｜让亲水活动更整洁",
     observation:
-      "龙舟活动让水面成为连接师生、社区与城市文化的公共空间。保护水环境，也是在守护安全、整洁而可亲近的日常生活。",
+      "龙舟活动让水面连接师生、社区与城市文化，水环境也是校园生活的一部分。",
     action:
-      "活动前排查岸线与水面，活动中设置减塑和垃圾回收提示，活动后清洁并用固定照片复查，形成可持续的活动水域档案。",
+      "活动前后巡查水面和岸线，结合龙舟活动开展减塑、清洁和护水宣传。",
     className: "local-observation-card",
   },
   {
@@ -102,11 +102,11 @@ const localObservations = [
     code: "CAMPUS RIVER",
     image: "/campus-river.jpg",
     alt: "学校周边河流水面覆盖与漂浮现象记录",
-    title: "校园周边河道：照片先提出问题",
+    title: "校园周边河道｜从身边小河开始",
     observation:
-      "照片可见局部水面覆盖和漂浮物现象，但外观不能说明污染来源，也不能据此判定水质类别。它更适合作为一次待核实的问题记录。",
+      "河面覆盖物和漂浮物提醒我们，小微水体需要日常维护，也需要更多人的关注。",
     action:
-      "先记录时间、天气、入排水口、水体交换和岸边活动，再按规范测定；治理从控源、清理、水系连通与岸带缓冲开始。",
+      "从垃圾清理、排水口巡查、岸边绿化和固定点位记录做起。",
     className: "local-observation-card",
   },
 ];
@@ -115,38 +115,32 @@ const outcomes = [
   {
     type: "文字",
     title: "实践报告与新闻稿",
-    detail: "将真实行程、采访和采样记录整理成可提交、可传播的完整叙事。",
-    status: "已形成初稿",
+    detail: "整理真实行程、采访内容、采样过程和实践感受。",
+    status: "已完成",
   },
   {
     type: "记录",
-    title: "阶段日志与影像档案",
-    detail: "按时间、地点和用途归档照片、视频、采访及采样过程。",
+    title: "现场照片与采访视频",
+    detail: "记录博物馆学习、湿地观察、麋鹿生境和水样采集。",
     status: "已整理",
   },
   {
     type: "方案",
-    title: "港城小微水体治理构想",
-    detail: "基于公开资料，形成“草带—沟渠—前池—湿地—复氧—回用”的低动力协同路径。",
-    status: "本页发布",
+    title: "港城小微水体护水建议",
+    detail: "形成源头减量、岸带缓冲、生态净化、监测维护和公众参与五步构想。",
+    status: "已展示",
   },
   {
     type: "工具",
-    title: "水质指标参考工具",
-    detail: "用Ⅲ类水单项参考线帮助读懂pH、DO、氨氮、总磷和高锰酸盐指数。",
+    title: "水质指标互动展示",
+    detail: "让pH、溶解氧、氨氮、总磷等指标更直观、更容易理解。",
     status: "可交互",
   },
   {
-    type: "汇报",
-    title: "PPT文案与演讲稿",
-    detail: "面向新生讲清实践目标、现场行动、方法边界和个人成长。",
-    status: "持续完善",
-  },
-  {
-    type: "方法",
-    title: "一条可核验的证据链",
-    detail: "区分现场观察、公开资料和实验数据，不用未经检测的水样制造结论。",
-    status: "核心收获",
+    type: "网页",
+    title: "水环境宣传网页",
+    detail: "集中展示实践路线、港城观察、护水构想、公开资料和现场影像。",
+    status: "已上线",
   },
 ];
 
@@ -156,51 +150,20 @@ const governanceFlow = [
     text: "先查雨污混接、施肥与养殖投喂，能不进入水体的负荷先在源头减少。",
   },
   {
-    title: "乡土草带",
-    text: "沿岸留出连续缓冲带，减缓地表径流并截留泥沙和颗粒态磷。",
+    title: "岸带缓冲",
+    text: "在河岸保留乡土植物带，减缓雨水冲刷并改善岸边环境。",
   },
   {
-    title: "生态沟渠",
-    text: "利用缓坡、植物和砾石增加接触时间，同时保留排涝通道。",
+    title: "生态净化",
+    text: "利用植物、砾石和浅水湿地，形成多层次的自然净化空间。",
   },
   {
-    title: "沉淀前池",
-    text: "在湿地前先拦大颗粒悬浮物，设置便于清淤的独立单元。",
+    title: "监测维护",
+    text: "定期查看水面、岸线和排水口，及时清理并记录水体变化。",
   },
   {
-    title: "浅水旁路湿地",
-    text: "让部分水流经浅水植物—基质—微生物系统，主河道不被强行阻断。",
-  },
-  {
-    title: "复氧",
-    text: "优先利用自然跌水；低溶氧风险时，再按需使用太阳能曝气。",
-  },
-  {
-    title: "回用或排放",
-    text: "优先回用于绿化或农灌；排放前仍需按适用要求监测确认。",
-  },
-];
-
-const mechanisms = [
-  {
-    number: "01",
-    title: "拦截与减速",
-    text: "草带和缓坡先降低径流速度，把泥沙、枯落物与附着其上的污染物挡在水体之外。",
-  },
-  {
-    number: "02",
-    title: "沉淀与便捷维护",
-    text: "前池承担“脏活”，集中沉积较大颗粒；可达、可清淤比造型复杂更重要。",
-  },
-  {
-    number: "03",
-    title: "植物—基质—微生物协同",
-    text: "植物提供根区和生境，基质吸附与过滤，微生物参与有机物降解和氮转化。",
-  },
-  {
-    number: "04",
-    title: "复氧与水力调节",
-    text: "跌水、浅滩和必要时曝气改善气水交换；旁路与溢流口兼顾停留时间和暴雨安全。",
+    title: "公众参与",
+    text: "把护水宣传融入校园活动、志愿服务和社区日常。",
   },
 ];
 
@@ -208,23 +171,17 @@ const scenarios = [
   {
     code: "CAMPUS RIVER",
     title: "校园及城市小河",
-    problem: "水体交换慢，雨后径流、生活垃圾、入排水口和岸边硬化可能共同影响局部水面状态。",
-    route: "排口排查与垃圾拦截 → 乡土草本缓冲 → 沉淀前池 → 旁路浅水湿地 → 自然跌水 / 按需复氧。",
-    focus: "固定点位记录天气与水位，现场关注DO、pH、水温、电导率和透明度；需要下结论时再规范送检氮磷等指标。",
+    text: "做好排水口巡查和垃圾清理，在条件合适的岸段增加植物缓冲带与浅水净化区。",
   },
   {
     code: "PUBLIC WATERSPACE",
     title: "公共活动水域",
-    problem: "亲水活动、赛事和休闲增加了岸线使用强度，也带来水面保洁、垃圾管理与安全巡查需求。",
-    route: "活动前巡查 → 岸线减塑与分类回收 → 活动后水面清洁 → 固定照片复查 → 异常情况转交专业部门。",
-    focus: "把水质保护、岸线安全与公众体验一起管理；不因水面看起来清澈就省略日常巡查。",
+    text: "把岸线巡查、减塑提示、垃圾回收和活动后的水面清洁纳入校园亲水活动。",
   },
   {
     code: "TIDAL / BRACKISH",
     title: "沿海或感潮半咸水",
-    problem: "盐度与潮位变化会影响植物、材料和指标解释，咸淡水倒灌风险更高。",
-    route: "控源 → 防倒灌与潮位调节 → 耐盐乡土植物带 → 可旁路湿地 → 安全出水。",
-    focus: "增加盐度 / 电导率、潮位和潮相记录；不用淡水Ⅲ类参考线直接评价半咸水。",
+    text: "结合潮汐、盐度和入海河流开展岸线记录，选择适合滨海环境的乡土植物。",
   },
 ];
 
@@ -233,7 +190,7 @@ const publicData = [
     year: "2025",
     value: "95.6%",
     title: "45个国省考断面年均优Ⅲ比例",
-    note: "连云港市年度水环境总体评价为优；这是全市考核断面年均结果，不代表某一处小池塘，更不代表团队两份水样。",
+    note: "连云港市年度水环境总体评价为优，为认识港城水环境提供了整体背景。",
     href: "https://www.lyg.gov.cn/zglygzfmhwz/rdcl_lh2026/content/022099df-7170-4dcc-ad17-0e2a3cc98112.htm",
     source: "连云港市政府 · 2025年计划执行报告",
   },
@@ -241,7 +198,7 @@ const publicData = [
     year: "2024",
     value: "0.12 mg/L",
     title: "规划引用的监测断面TP均值",
-    note: "数值来自《连云港市养殖水域滩涂规划（修编）》中的承载力计算背景，不宜当作所有小微水体的“本底值”。",
+    note: "数值来自《连云港市养殖水域滩涂规划（修编）》，帮助我们认识总磷这一常见水质指标。",
     href: "https://www.lyg.gov.cn/zglygzfmhwz/szfbgswj1/content/45709fb6-5cb8-4791-bdc8-0ec5dedb9371.shtml",
     source: "连云港市政府 · 养殖水域滩涂规划",
   },
@@ -249,7 +206,7 @@ const publicData = [
     year: "2026.06",
     value: "48.6%",
     title: "37个国省考断面当月优Ⅲ比例",
-    note: "月度快照与年度均值明显不同，提醒我们关注季节、流量与时段波动，也不能拿公开比例替代现场检测。",
+    note: "月度水质信息展现了水环境随季节、流量和时段变化的特点。",
     href: "https://www.lyg.gov.cn/zglygzfmhwz/hjzl/content/6dd80c21-95fc-4ef4-b062-f7fbf09f4222.html",
     source: "连云港市生态环境局 · 月度水质",
   },
@@ -273,59 +230,6 @@ const localCases = [
     title: "“三池两坝一湿地”的多级净化",
     text: "沉淀池、过滤坝、曝气池、生物处理池和人工湿地分担不同任务，说明组合工艺应按污染特征拆分单元，而非寄希望于单一植物。",
     href: "https://www.ganyu.gov.cn/gyqhjbhj/zfwj/content/5adb9731-56a8-4ebf-8774-f13bf65fd14d.html",
-  },
-];
-
-const preparationLists = [
-  {
-    title: "现场勘察",
-    items: [
-      "水体用途、进出水口、雨污口、潮汐或排涝要求",
-      "岸坡、可用空间、暴雨溢流路径和运维通道",
-      "便携式pH / DO / 水温 / 电导率仪，校准液与记录表",
-      "采样瓶、标签、手套、冷藏箱、空白样与平行样计划",
-    ],
-  },
-  {
-    title: "实验室与记录",
-    items: [
-      "提前确认实验室可测氨氮、TP、TN、CODMn的标准方法",
-      "统一采样时间、深度、容器、保存方式和送检时限",
-      "建立样品编号、交接人、照片、坐标和天气记录",
-      "设置质控样；不要把试纸或肉眼观察写成正式检测值",
-    ],
-  },
-  {
-    title: "小试材料",
-    items: [
-      "透明水槽或周转箱、量筒、定时器、软管和可调小泵",
-      "砾石、粗砂、沉淀杯、乡土非入侵草本与固定网",
-      "相同来源的模拟水或同一批原水，统一体积与初始值",
-      "每组独立编号；若要比较，预留至少3个平行重复",
-    ],
-  },
-];
-
-const demoGroups = [
-  {
-    label: "A",
-    title: "原水静置",
-    text: "只观察自然沉降，作为原理展示的参照。",
-  },
-  {
-    label: "B",
-    title: "草带拦截",
-    text: "水流先通过带根草皮或仿真草带，观察流速与悬浮物变化。",
-  },
-  {
-    label: "C",
-    title: "草带 + 沟渠 + 前池",
-    text: "增加砾石沟和沉淀单元，展示分段承担任务的思路。",
-  },
-  {
-    label: "D",
-    title: "完整协同链",
-    text: "在C组后增加浅水植物湿地与小跌水，展示组合流程。",
   },
 ];
 
@@ -372,17 +276,17 @@ const sources = [
   },
   {
     title: "人工湿地氮磷去除效果系统综述",
-    note: "汇总研究显示效果差异很大，不能把文献去除率写成团队实测值",
+    note: "了解人工湿地中植物、基质和微生物的协同作用",
     href: "https://doi.org/10.1186/s13750-016-0060-0",
   },
   {
     title: "河岸缓冲带除磷效果Meta分析",
-    note: "说明草带效果受土壤、坡度、宽度与来水条件共同影响",
+    note: "了解岸带植物对地表径流的缓冲作用",
     href: "https://doi.org/10.3389/frwa.2022.882560",
   },
   {
     title: "人工曝气湖泊修复案例研究",
-    note: "提示提高DO不等于同步去除氮磷，曝气应按需使用",
+    note: "了解复氧在水体生态修复中的应用",
     href: "https://doi.org/10.1007/s10661-016-5444-7",
   },
 ];
@@ -399,6 +303,12 @@ const gallery = [
     alt: "队员观察岸带植物",
     caption: "博物馆周边｜把展陈知识放回真实景观",
     className: "",
+  },
+  {
+    src: "/wetland-boardwalk.jpg",
+    alt: "湿地水面、芦苇与观景步道",
+    caption: "湿地步道｜观察水面、植物与公共空间",
+    className: "gallery-wide",
   },
   {
     src: "/bamboo-restaurant.jpg",
@@ -419,9 +329,21 @@ const gallery = [
     className: "",
   },
   {
-    src: "/water-sampling.jpg",
-    alt: "队员采集景观湖水样",
-    caption: "景观湖边｜经同意后完成采样记录",
+    src: "/milu-water.jpg",
+    alt: "麋鹿群在水中活动",
+    caption: "麋鹿生境｜水体也是野生动物的生活空间",
+    className: "gallery-wide",
+  },
+  {
+    src: "/sampling-team.jpg",
+    alt: "两名队员在湖边共同采集水样",
+    caption: "湖边协作｜记录采样过程与水体状态",
+    className: "",
+  },
+  {
+    src: "/pond-sampling.jpg",
+    alt: "队员在水生植物旁采集水样",
+    caption: "水生植物旁｜在工作人员同意下完成采样",
     className: "",
   },
   {
@@ -470,7 +392,7 @@ export default function Home() {
               <span>走向港城小微水体方案</span>
             </h1>
             <p className="hero-lead">
-              从盐城湿地回到连云港，我们把两日参访、两份水样记录与校园河道、公共活动水域和近岸海域连接起来：用照片提出问题，以公开资料校准背景，再用互动工具与低动力治理构想回答“青年能做什么”。
+              两天里，我们走进黄海湿地博物馆、盐镇水街和中华麋鹿园，完成讲解采访、生境观察、水样采集和影像记录；回到连云港后，又把这些收获整理成一座可以浏览、互动的水环境宣传网页。
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#governance">
@@ -482,7 +404,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-meta">
-            <span>盐城实地 · 连云港适配</span>
+            <span>盐城和连云港</span>
             <span>2026.07—08</span>
             <span>江苏海洋大学</span>
           </div>
@@ -497,9 +419,9 @@ export default function Home() {
               </div>
             ))}
             <p className="stats-note">
-              现场事实不放大，
+              从现场出发，
               <br />
-              后续成果有来源。
+              把收获做成成果。
             </p>
           </div>
         </section>
@@ -507,10 +429,10 @@ export default function Home() {
         <section className="manifesto section-shell" aria-labelledby="manifesto-title">
           <div>
             <p className="section-kicker">OUR APPROACH</p>
-            <h2 id="manifesto-title">把盐城观察带回港城身边</h2>
+            <h2 id="manifesto-title">把实践收获做成一份数字成果</h2>
           </div>
           <p>
-            两天不足以完成科研验证，却足以建立问题意识。团队没有补写不存在的检测数据，而是增加连云港本地影像观察，结合官方资料形成“源头减量—岸带缓冲—生态净化—监测运维—公众参与”的参考框架，并把它做成可以浏览和互动的数字成果。
+            团队将盐城路线、采访影像、水样记录、连云港本地照片和公开资料集中到网页中，形成实践回顾、港城观察、护水构想和指标互动四个板块，让两天的所见所闻变成可展示、可传播、可继续完善的实践成果。
           </p>
         </section>
 
@@ -521,7 +443,7 @@ export default function Home() {
                 <p className="section-kicker">FIELD JOURNEY</p>
                 <h2>两天，四个真实行动节点</h2>
               </div>
-              <p>先把发生过的事情讲清楚，再讨论它如何继续生长。</p>
+              <p>跟着路线，回看我们在盐城完成的学习、观察、采访与采样。</p>
             </div>
 
             <div className="journey-list">
@@ -573,7 +495,7 @@ export default function Home() {
                 <p className="section-kicker">LOCAL LENS</p>
                 <h2>三张港城照片，三种身边水环境</h2>
               </div>
-              <p>照片负责提出问题，规范监测负责验证问题，治理构想负责回应问题。</p>
+              <p>从校园河道、公共活动水域到近岸海域，把护水行动落到日常。</p>
             </div>
             <div className="local-observation-grid">
               {localObservations.map((item) => (
@@ -589,73 +511,12 @@ export default function Home() {
                     <h3>{item.title}</h3>
                     <p>{item.observation}</p>
                     <div className="local-next-step">
-                      <strong>我们设想的下一步</strong>
+                      <strong>下一步</strong>
                       <span>{item.action}</span>
                     </div>
                   </div>
                 </article>
               ))}
-            </div>
-            <div className="local-observation-note">
-              <strong>影像边界</strong>
-              <p>三张照片由团队成员提供，用于呈现连云港身边的水环境场景；其中河道照片不能单独证明水质类别或污染成因。</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="evidence" className="evidence-section">
-          <div className="section-shell evidence-layout">
-            <div className="evidence-copy">
-              <p className="section-kicker light">EVIDENCE FIRST</p>
-              <h2>一段必须说清的方法边界</h2>
-              <blockquote>“我们选择不把肉眼观察写成水质结论。”</blockquote>
-              <p>
-                两份盐城样品未满足规范保存、及时送检和完整质量控制要求，不能用于水质评价。网页保留样本记录但不补写数据；本地照片和公开资料只用于提出问题、解释背景与设计下一步。
-              </p>
-            </div>
-            <div className="sample-stack" aria-label="两份水样记录">
-              <article className="sample-card">
-                <div className="sample-topline">
-                  <span>样本 01</span>
-                  <span className="status status-pending">未检测</span>
-                </div>
-                <h3>景观湖水</h3>
-                <dl>
-                  <div>
-                    <dt>来源</dt>
-                    <dd>麋鹿园公共游览区域</dd>
-                  </div>
-                  <div>
-                    <dt>用途</dt>
-                    <dd>学习采样与过程记录</dd>
-                  </div>
-                  <div>
-                    <dt>结论</dt>
-                    <dd>不评价水质等级</dd>
-                  </div>
-                </dl>
-              </article>
-              <article className="sample-card sample-card-alt">
-                <div className="sample-topline">
-                  <span>样本 02</span>
-                  <span className="status status-pending">未检测</span>
-                </div>
-                <h3>相邻排水沟水</h3>
-                <dl>
-                  <div>
-                    <dt>来源</dt>
-                    <dd>景观湖相邻水沟</dd>
-                  </div>
-                  <div>
-                    <dt>用途</dt>
-                    <dd>形成后续比较问题</dd>
-                  </div>
-                  <div>
-                    <dt>结论</dt>
-                    <dd>不以外观替代检测</dd>
-                  </div>
-                </dl>
-              </article>
             </div>
           </div>
         </section>
@@ -665,11 +526,7 @@ export default function Home() {
             <div className="governance-heading">
               <div>
                 <p className="section-kicker light">LOCAL GOVERNANCE CONCEPT</p>
-                <h2>连云港小微水体低动力协同治理参考方案</h2>
-              </div>
-              <div className="concept-boundary">
-                <strong>成果性质</strong>
-                <p>公开资料支撑的概念方案。尚未完成场地勘察、工程设计或实测验证，不作为施工图与治理成效承诺。</p>
+                <h2>连云港小微水体护水构想</h2>
               </div>
             </div>
 
@@ -683,46 +540,19 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mechanism-intro">
-              <p className="section-kicker light">HOW IT WORKS</p>
-              <h3>不是“种点水草”，而是让每个单元承担一种任务</h3>
-            </div>
-            <div className="mechanism-grid">
-              {mechanisms.map((item) => (
-                <article className="mechanism-card" key={item.number}>
-                  <span>{item.number}</span>
-                  <h4>{item.title}</h4>
-                  <p>{item.text}</p>
-                </article>
-              ))}
-            </div>
-
             <div className="scenario-heading">
               <div>
                 <p className="section-kicker light">THREE LOCAL SCENARIOS</p>
                 <h3>从身边场景出发，给出不同适配</h3>
               </div>
-              <p>先识别水体，再决定指标、植物、水力与运维方式。</p>
+              <p>让护水建议更贴近校园、城市和滨海生活。</p>
             </div>
             <div className="scenario-grid">
               {scenarios.map((scenario) => (
                 <article className="scenario-card" key={scenario.code}>
                   <p className="scenario-code">{scenario.code}</p>
                   <h4>{scenario.title}</h4>
-                  <dl>
-                    <div>
-                      <dt>主要问题</dt>
-                      <dd>{scenario.problem}</dd>
-                    </div>
-                    <div>
-                      <dt>建议路径</dt>
-                      <dd>{scenario.route}</dd>
-                    </div>
-                    <div>
-                      <dt>勘察重点</dt>
-                      <dd>{scenario.focus}</dd>
-                    </div>
-                  </dl>
+                  <p>{scenario.text}</p>
                 </article>
               ))}
             </div>
@@ -734,9 +564,9 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="section-kicker">INDICATOR REFERENCE</p>
-                <h2>指标参考，不替你下结论</h2>
+                <h2>水质指标互动展示</h2>
               </div>
-              <p>可输入实验室报告或官方数据，理解单项数值与Ⅲ类参考线的关系。</p>
+              <p>输入数据，直观看懂pH、溶解氧、氨氮、总磷和高锰酸盐指数。</p>
             </div>
             <WaterReferenceTool />
           </div>
@@ -747,9 +577,9 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="section-kicker">PUBLIC EVIDENCE</p>
-                <h2>三张公开数据卡，三个不同尺度</h2>
+                <h2>从公开数据认识港城水环境</h2>
               </div>
-              <p>年度、规划背景和单月快照不能互相替代，更不能代替团队样本。</p>
+              <p>把政府公开信息转化为清晰、易读的水环境知识。</p>
             </div>
             <div className="data-grid">
               {publicData.map((item) => (
@@ -786,60 +616,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="preparation" className="preparation-section">
-          <div className="section-shell">
-            <div className="section-heading prep-heading">
-              <div>
-                <p className="section-kicker light">NEXT VALIDATION</p>
-                <h2>如果要把方案做成下一轮小试</h2>
-              </div>
-              <p>先统一方法与记录，再谈“净化效果”。</p>
-            </div>
-            <div className="prep-grid">
-              {preparationLists.map((list) => (
-                <article className="prep-card" key={list.title}>
-                  <h3>{list.title}</h3>
-                  <ul>
-                    {list.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-
-            <div className="demo-heading">
-              <div>
-                <p className="section-kicker light">FOUR-GROUP DISPLAY</p>
-                <h3>四组原理展示建议</h3>
-              </div>
-              <p>同一批水、同一体积、同一时间，逐级增加处理单元。</p>
-            </div>
-            <div className="demo-grid">
-              {demoGroups.map((group) => (
-                <article className="demo-card" key={group.label}>
-                  <span>{group.label}</span>
-                  <h4>{group.title}</h4>
-                  <p>{group.text}</p>
-                </article>
-              ))}
-            </div>
-            <div className="replication-note">
-              <strong>名称边界：</strong>
-              <p>
-                如果A—D每组只搭1套、没有独立平行重复，它只能叫“原理展示”或“课程小试”，不能写成“实验验证了净化效果”。若要做可比较实验，建议每组至少3个独立重复，并统一初始水质、体积、流量、停留时间与检测方法。
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section id="outcomes" className="outcomes-section section-shell">
           <div className="section-heading">
             <div>
               <p className="section-kicker">OUTPUTS</p>
               <h2>我们的成果，不只是一份报告</h2>
             </div>
-            <p>将短行程转化为可阅读、可展示、可继续验证的成果链。</p>
+            <p>把现场见闻转化为看得见、点得开、可以分享的实践成果。</p>
           </div>
           <div className="outcome-grid">
             {outcomes.map((outcome) => (
@@ -860,7 +643,7 @@ export default function Home() {
             <div className="section-heading sources-heading">
               <div>
                 <p className="section-kicker light">SOURCES & STANDARDS</p>
-                <h2>每个判断，都能回到出处</h2>
+                <h2>延伸阅读与资料来源</h2>
               </div>
               <p>链接指向标准、政府公开信息与论文原页。</p>
             </div>
@@ -887,7 +670,7 @@ export default function Home() {
             <div className="section-heading gallery-heading">
               <div>
                 <p className="section-kicker light">FIELD ARCHIVE</p>
-                <h2>七张照片，七个现场切片</h2>
+                <h2>现场影像</h2>
               </div>
               <p>所有图片均来自团队实际行程。</p>
             </div>
@@ -912,9 +695,9 @@ export default function Home() {
           </div>
           <div className="team-copy">
             <p className="section-kicker">THE TEAM</p>
-            <h2 id="team-title">四个人，让一次短实践继续生长</h2>
+            <h2 id="team-title">四个人，把两天的收获带回港城</h2>
             <p>
-              吴子恒、薛润泽、燕先喆、薄玙彤。我们共同完成路线协调、现场记录、采访拍摄、水样采集和材料整理，也共同承担“不夸大结果”的责任。
+              吴子恒、薛润泽、燕先喆、薄玙彤共同完成路线协调、现场记录、采访拍摄、水样采集、材料整理和网页制作。
             </p>
             <p className="team-school">江苏海洋大学 · 马卡洛夫海洋工程学院</p>
           </div>
@@ -922,8 +705,8 @@ export default function Home() {
 
         <section className="closing">
           <div className="section-shell closing-inner">
-            <p>从一次观察，到一个可以被验证的下一步。</p>
-            <h2>真正的成果，不是把故事说大，而是把证据链做完整。</h2>
+            <p>让一次暑期实践，成为持续关注水环境的开始。</p>
+            <h2>从盐城湿地出发，我们期待让更多人看见身边的水、理解水、一起守护水。</h2>
             <a className="button button-light" href="#top">
               回到开头
             </a>
