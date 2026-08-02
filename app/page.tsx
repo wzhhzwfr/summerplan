@@ -72,6 +72,45 @@ const insights = [
   },
 ];
 
+const localObservations = [
+  {
+    index: "01",
+    code: "COAST / PORT CITY",
+    image: "/lyg-coast.jpg",
+    alt: "隔水眺望连云港近岸海域、船舶与港城建筑",
+    title: "近岸海域：把潮汐和盐度放进判断",
+    observation:
+      "近岸海域连接港口、城市与山海景观。全市或海湾尺度的公开评价可以提供背景，却不能替代对某一岸段、某一时刻的具体判断。",
+    action:
+      "记录潮位、潮相、降雨与盐度或电导率，关注入海河流和排口；咸淡水交汇场景不直接套用普通淡水参考线。",
+    className: "local-observation-card local-observation-wide",
+  },
+  {
+    index: "02",
+    code: "PUBLIC WATERSPACE",
+    image: "/campus-dragon-boat.jpg",
+    alt: "校园周边水域开展龙舟活动",
+    title: "公共活动水域：水环境也是校园生活",
+    observation:
+      "龙舟活动让水面成为连接师生、社区与城市文化的公共空间。保护水环境，也是在守护安全、整洁而可亲近的日常生活。",
+    action:
+      "活动前排查岸线与水面，活动中设置减塑和垃圾回收提示，活动后清洁并用固定照片复查，形成可持续的活动水域档案。",
+    className: "local-observation-card",
+  },
+  {
+    index: "03",
+    code: "CAMPUS RIVER",
+    image: "/campus-river.jpg",
+    alt: "学校周边河流水面覆盖与漂浮现象记录",
+    title: "校园周边河道：照片先提出问题",
+    observation:
+      "照片可见局部水面覆盖和漂浮物现象，但外观不能说明污染来源，也不能据此判定水质类别。它更适合作为一次待核实的问题记录。",
+    action:
+      "先记录时间、天气、入排水口、水体交换和岸边活动，再按规范测定；治理从控源、清理、水系连通与岸带缓冲开始。",
+    className: "local-observation-card",
+  },
+];
+
 const outcomes = [
   {
     type: "文字",
@@ -167,18 +206,18 @@ const mechanisms = [
 
 const scenarios = [
   {
-    code: "URBAN POND",
-    title: "城市池塘",
-    problem: "水体交换慢、夏季低溶氧、岸边面源输入与底泥扰动。",
-    route: "入水口前池 → 局部岸带草本缓冲 → 旁路浅水湿地 → 自然跌水 / 按需太阳能曝气。",
-    focus: "优先记录DO、pH、水温、透明度、氨氮、TP和CODMn；给保洁与清淤留通道。",
+    code: "CAMPUS RIVER",
+    title: "校园及城市小河",
+    problem: "水体交换慢，雨后径流、生活垃圾、入排水口和岸边硬化可能共同影响局部水面状态。",
+    route: "排口排查与垃圾拦截 → 乡土草本缓冲 → 沉淀前池 → 旁路浅水湿地 → 自然跌水 / 按需复氧。",
+    focus: "固定点位记录天气与水位，现场关注DO、pH、水温、电导率和透明度；需要下结论时再规范送检氮磷等指标。",
   },
   {
-    code: "FARM DITCH",
-    title: "农村排水沟",
-    problem: "降雨或灌溉后短时退水携带泥沙、氮磷，流量峰值变化大。",
-    route: "减肥减药 → 田边草带 → 生态沟渠 → 沉淀塘 → 小型湿地 → 蓄水回灌。",
-    focus: "不能以净化为由影响行洪排涝；按作物周期比较雨前、雨后与回用端水样。",
+    code: "PUBLIC WATERSPACE",
+    title: "公共活动水域",
+    problem: "亲水活动、赛事和休闲增加了岸线使用强度，也带来水面保洁、垃圾管理与安全巡查需求。",
+    route: "活动前巡查 → 岸线减塑与分类回收 → 活动后水面清洁 → 固定照片复查 → 异常情况转交专业部门。",
+    focus: "把水质保护、岸线安全与公众体验一起管理；不因水面看起来清澈就省略日常巡查。",
   },
   {
     code: "TIDAL / BRACKISH",
@@ -195,8 +234,8 @@ const publicData = [
     value: "95.6%",
     title: "45个国省考断面年均优Ⅲ比例",
     note: "连云港市年度水环境总体评价为优；这是全市考核断面年均结果，不代表某一处小池塘，更不代表团队两份水样。",
-    href: "https://www.lyg.gov.cn/zglygzfmhwz/gcyw/content/250e68c0-fc6f-4263-b2a6-7f4e304f8125.html",
-    source: "连云港市政府 · 2025年度公报解读",
+    href: "https://www.lyg.gov.cn/zglygzfmhwz/rdcl_lh2026/content/022099df-7170-4dcc-ad17-0e2a3cc98112.htm",
+    source: "连云港市政府 · 2025年计划执行报告",
   },
   {
     year: "2024",
@@ -304,7 +343,7 @@ const sources = [
   {
     title: "《人工湿地水质净化技术指南》",
     note: "湿地选型、布置与运行维护",
-    href: "https://www.mee.gov.cn/xxgk/hjyw/202106/t20210612_837524.shtml",
+    href: "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202104/t20210430_831538.html",
   },
   {
     title: "《河湖生态缓冲带保护修复技术指南》",
@@ -319,7 +358,7 @@ const sources = [
   {
     title: "2025年度连云港市生态环境状况公报解读",
     note: "年度断面优Ⅲ比例",
-    href: "https://www.lyg.gov.cn/zglygzfmhwz/gcyw/content/250e68c0-fc6f-4263-b2a6-7f4e304f8125.html",
+    href: "https://www.lyg.gov.cn/zglygzfmhwz/rdcl_lh2026/content/022099df-7170-4dcc-ad17-0e2a3cc98112.htm",
   },
   {
     title: "2026年6月连云港市地表水质量状况",
@@ -406,10 +445,10 @@ export default function Home() {
         </a>
         <nav aria-label="页面导航">
           <a href="#journey">真实实践</a>
+          <a href="#local">港城观察</a>
           <a href="#governance">治理方案</a>
           <a href="#tool">指标工具</a>
           <a href="#data">公开证据</a>
-          <a href="#gallery">影像档案</a>
         </nav>
       </header>
 
@@ -431,7 +470,7 @@ export default function Home() {
               <span>走向港城小微水体方案</span>
             </h1>
             <p className="hero-lead">
-              两份水样没有送检，我们不虚构水质结论；但现场问题意识没有停在采样瓶里。团队进一步查阅公开数据与技术指南，形成一套面向连云港城市池塘、农村排水沟和感潮半咸水的低动力协同治理构想。
+              从盐城湿地回到连云港，我们把两日参访、两份水样记录与校园河道、公共活动水域和近岸海域连接起来：用照片提出问题，以公开资料校准背景，再用互动工具与低动力治理构想回答“青年能做什么”。
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#governance">
@@ -468,10 +507,10 @@ export default function Home() {
         <section className="manifesto section-shell" aria-labelledby="manifesto-title">
           <div>
             <p className="section-kicker">OUR APPROACH</p>
-            <h2 id="manifesto-title">把“没有检测”变成一次方法升级</h2>
+            <h2 id="manifesto-title">把盐城观察带回港城身边</h2>
           </div>
           <p>
-            两天不足以完成科研验证，却足以发现问题、学习边界，再把现场观察与公开证据连接起来。我们的新增成果不是一组杜撰的氮磷数据，而是一套明确标注“待现场勘察、待小试验证”的低动力治理参考方案，以及帮助理解指标的交互工具。
+            两天不足以完成科研验证，却足以建立问题意识。团队没有补写不存在的检测数据，而是增加连云港本地影像观察，结合官方资料形成“源头减量—岸带缓冲—生态净化—监测运维—公众参与”的参考框架，并把它做成可以浏览和互动的数字成果。
           </p>
         </section>
 
@@ -527,14 +566,51 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="local" className="local-observation-section">
+          <div className="section-shell">
+            <div className="section-heading local-observation-heading">
+              <div>
+                <p className="section-kicker">LOCAL LENS</p>
+                <h2>三张港城照片，三种身边水环境</h2>
+              </div>
+              <p>照片负责提出问题，规范监测负责验证问题，治理构想负责回应问题。</p>
+            </div>
+            <div className="local-observation-grid">
+              {localObservations.map((item) => (
+                <article className={item.className} key={item.index}>
+                  <figure>
+                    <img src={item.image} alt={item.alt} loading="lazy" />
+                    <figcaption>
+                      <span>{item.index}</span>
+                      <small>{item.code}</small>
+                    </figcaption>
+                  </figure>
+                  <div className="local-observation-copy">
+                    <h3>{item.title}</h3>
+                    <p>{item.observation}</p>
+                    <div className="local-next-step">
+                      <strong>我们设想的下一步</strong>
+                      <span>{item.action}</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="local-observation-note">
+              <strong>影像边界</strong>
+              <p>三张照片由团队成员提供，用于呈现连云港身边的水环境场景；其中河道照片不能单独证明水质类别或污染成因。</p>
+            </div>
+          </div>
+        </section>
+
         <section id="evidence" className="evidence-section">
           <div className="section-shell evidence-layout">
             <div className="evidence-copy">
               <p className="section-kicker light">EVIDENCE FIRST</p>
-              <h2>无检测，不等于无成果</h2>
+              <h2>一段必须说清的方法边界</h2>
               <blockquote>“我们选择不把肉眼观察写成水质结论。”</blockquote>
               <p>
-                两份样品均未送实验室检测，因此网页不展示虚构的pH、溶解氧、氮磷或水质等级。现场照片只证明采样动作与周边环境；后文公开数据只提供城市背景，两者都不能替代团队样本检测。
+                两份盐城样品未满足规范保存、及时送检和完整质量控制要求，不能用于水质评价。网页保留样本记录但不补写数据；本地照片和公开资料只用于提出问题、解释背景与设计下一步。
               </p>
             </div>
             <div className="sample-stack" aria-label="两份水样记录">
@@ -624,7 +700,7 @@ export default function Home() {
             <div className="scenario-heading">
               <div>
                 <p className="section-kicker light">THREE LOCAL SCENARIOS</p>
-                <h3>同一条逻辑，三种不同适配</h3>
+                <h3>从身边场景出发，给出不同适配</h3>
               </div>
               <p>先识别水体，再决定指标、植物、水力与运维方式。</p>
             </div>
