@@ -519,6 +519,159 @@ dd {
   line-height: 1.85;
 }
 
+/* Lianyungang local observation */
+.local-observation-section {
+  padding: 138px 0 146px;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(92, 168, 198, 0.16), transparent 30%),
+    linear-gradient(180deg, #e8efeb, #f5f3ec 74%);
+}
+
+.local-observation-heading {
+  align-items: end;
+}
+
+.local-observation-heading > p {
+  max-width: 470px;
+}
+
+.local-observation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.local-observation-card {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(19, 37, 32, 0.08);
+  border-radius: 4px 34px 4px 4px;
+  box-shadow: 0 24px 64px rgba(12, 43, 38, 0.09);
+}
+
+.local-observation-wide {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.32fr) minmax(320px, 0.68fr);
+}
+
+.local-observation-card figure {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  background: var(--teal-deep);
+}
+
+.local-observation-wide figure {
+  min-height: 500px;
+}
+
+.local-observation-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 360ms ease, filter 360ms ease;
+}
+
+.local-observation-card:hover img {
+  transform: scale(1.025);
+  filter: saturate(1.04);
+}
+
+.local-observation-card figcaption {
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 13px;
+  color: var(--white);
+  background: rgba(5, 32, 31, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+}
+
+.local-observation-card figcaption span {
+  color: var(--aqua);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+}
+
+.local-observation-card figcaption small {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.local-observation-copy {
+  padding: 34px 34px 36px;
+}
+
+.local-observation-wide .local-observation-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+}
+
+.local-observation-copy h3 {
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-size: clamp(27px, 3vw, 40px);
+  letter-spacing: -0.04em;
+  line-height: 1.28;
+}
+
+.local-observation-copy > p {
+  margin-top: 22px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.local-next-step {
+  display: grid;
+  gap: 10px;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.local-next-step strong {
+  color: var(--teal);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.local-next-step span {
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.local-observation-note {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-top: 24px;
+  padding: 22px 26px;
+  color: rgba(255, 255, 255, 0.76);
+  background: var(--teal-deep);
+  border-radius: 3px 24px 3px 3px;
+}
+
+.local-observation-note strong {
+  flex: 0 0 auto;
+  color: var(--aqua);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.local-observation-note p {
+  line-height: 1.8;
+}
+
 .evidence-section {
   position: relative;
   overflow: hidden;
@@ -1177,7 +1330,7 @@ button:focus-visible {
 .flow-track {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   margin-top: 76px;
   border-top: 1px solid rgba(255, 255, 255, 0.17);
   border-bottom: 1px solid rgba(255, 255, 255, 0.17);
@@ -1307,7 +1460,7 @@ button:focus-visible {
 }
 
 .scenario-card {
-  min-height: 540px;
+  min-height: 310px;
   padding: 34px 32px;
   color: var(--ink);
   background: var(--paper);
@@ -1326,6 +1479,13 @@ button:focus-visible {
   margin-top: 18px;
   font-family: "Noto Serif SC", "Songti SC", STSong, serif;
   font-size: 31px;
+}
+
+.scenario-card > p:last-child {
+  margin-top: 42px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.9;
 }
 
 .scenario-card dl {
@@ -1895,8 +2055,13 @@ button:focus-visible {
   .scenario-grid,
   .data-grid,
   .case-grid,
-  .prep-grid {
+  .prep-grid,
+  .local-observation-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .local-observation-wide {
+    display: block;
   }
 
   .scenario-card {
@@ -1927,21 +2092,18 @@ button:focus-visible {
   .tool-section,
   .data-section,
   .preparation-section,
-  .sources-section {
+  .sources-section,
+  .local-observation-section {
     padding-top: 90px;
     padding-bottom: 94px;
   }
 
-  .site-header nav a:first-child {
+  .site-header nav a {
     display: none;
   }
 
-  .site-header nav a:nth-child(2) {
+  .site-header nav a[href="#local"] {
     display: inline-block;
-  }
-
-  .site-header nav a:nth-child(n + 3) {
-    display: none;
   }
 
   .governance-heading {
@@ -1969,8 +2131,25 @@ button:focus-visible {
   .case-grid,
   .prep-grid,
   .demo-grid,
-  .indicator-inputs {
+  .indicator-inputs,
+  .local-observation-grid {
     grid-template-columns: 1fr;
+  }
+
+  .local-observation-card figure,
+  .local-observation-wide figure {
+    min-height: 300px;
+  }
+
+  .local-observation-wide .local-observation-copy,
+  .local-observation-copy {
+    padding: 28px 24px 30px;
+  }
+
+  .local-observation-note {
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .scenario-heading,

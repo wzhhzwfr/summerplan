@@ -34,7 +34,7 @@ if (!response.ok) {
 }
 
 const html = await response.text();
-if (!html.includes("连云港小微水体低动力协同治理参考方案")) {
+if (!html.includes("连云港小微水体护水构想")) {
   throw new Error("Static render is missing the governance outcome section");
 }
 

@@ -12,9 +12,9 @@ export async function generateMetadata(): Promise<Metadata> {
     requestHeaders.get("x-forwarded-proto") ??
     (host.startsWith("localhost") ? "http" : "https");
   const baseUrl = `${protocol}://${host}`;
-  const title = "林海相依｜从盐城湿地观察到港城小微水体治理构想";
+  const title = "林海相依｜盐城湿地实践与港城护水行动";
   const description =
-    "江苏海洋大学“林海相依”实践团：盐城两日真实实践、证据边界与连云港小微水体低动力协同治理参考方案。";
+    "江苏海洋大学“林海相依”实践团：盐城湿地实践、连云港在地观察、水质指标互动展示与港城护水构想。";
 
   return {
     title,
@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: `${baseUrl}/og-governance.png`,
           width: 1729,
           height: 910,
-          alt: "林海相依·从盐城湿地观察到连云港小微水体治理构想",
+          alt: "林海相依·盐城湿地实践与连云港护水行动",
         },
       ],
     },
