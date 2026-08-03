@@ -51,11 +51,12 @@ test("server-renders the complete practice and outreach outcome", async () => {
 });
 
 test("keeps the indicator tool, positive outcomes and metadata wired", async () => {
-  const [page, tool, layout, readme] = await Promise.all([
+  const [page, tool, layout, readme, styles] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/WaterReferenceTool.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
     readFile(new URL("../README.md", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
   ]);
 
   assert.match(page, /import WaterReferenceTool from "\.\/WaterReferenceTool"/);
@@ -67,6 +68,9 @@ test("keeps the indicator tool, positive outcomes and metadata wired", async () 
   assert.match(tool, /输入数值，看看它与参考线的关系/);
   assert.match(layout, /\/og-governance\.png/);
   assert.match(readme, /监测维护—公众参与/);
+  assert.doesNotMatch(styles, /scroll-behavior:\s*smooth/);
+  assert.match(styles, /grid-template-columns:\s*repeat\(5, 170px\)/);
+  assert.match(styles, /touch-action:\s*pan-x pan-y/);
 
   await access(new URL("../public/og-governance.png", import.meta.url));
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
