@@ -9,6 +9,9 @@ test("exports the full outcome page for GitHub Pages", async () => {
   assert.match(html, /三张港城照片，三种身边水环境/);
   assert.match(html, /把实践收获做成一份数字成果/);
   assert.match(html, /WaterReferenceTool-[^\"]+\.js/);
+  assert.match(html, /ScrollButton-[^\"]+\.js/);
+  assert.match(html, /盐城与连云港：公开数据对照/);
+  assert.doesNotMatch(html, /href=\"#/);
   assert.match(html, /https:\/\/summerplan\.255515\.xyz\/og-governance\.png/);
 
   await access(new URL("../assets", import.meta.url));

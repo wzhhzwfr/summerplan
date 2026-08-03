@@ -43,7 +43,12 @@ test("server-renders the complete practice and outreach outcome", async () => {
   assert.match(html, /95\.6%/);
   assert.match(html, /0\.12 mg\/L/);
   assert.match(html, /48\.6%/);
+  assert.match(html, /盐城与连云港：公开数据对照/);
+  assert.match(html, /100%/);
+  assert.match(html, /4\.4/);
+  assert.match(html, /2025年6月，盐城51个省考及以上断面优Ⅲ比例为56\.9%/);
   assert.match(html, /水质指标互动展示/);
+  assert.match(html, /填满5项后，生成水体综合解读/);
   assert.match(html, /从盐城湿地出发/);
   assert.doesNotMatch(html, /一段必须说清的方法边界/);
   assert.doesNotMatch(html, /这只是面向课程展示/);
@@ -60,17 +65,24 @@ test("keeps the indicator tool, positive outcomes and metadata wired", async () 
   ]);
 
   assert.match(page, /import WaterReferenceTool from "\.\/WaterReferenceTool"/);
+  assert.match(page, /import ScrollButton from "\.\/ScrollButton"/);
   assert.match(page, /<WaterReferenceTool \/>/);
+  assert.doesNotMatch(page, /href="#/);
   assert.match(page, /水环境宣传网页/);
   assert.match(tool, /^"use client";/);
   assert.match(tool, /湖泊 \/ 水库/);
   assert.match(tool, /waterType === "lake" \? 0\.05 : 0\.2/);
-  assert.match(tool, /输入数值，看看它与参考线的关系/);
+  assert.match(tool, /输入5项数据，生成水体初步判断/);
+  assert.match(tool, /不能据此判断可直接饮用/);
+  assert.match(tool, /可能相关因素/);
+  assert.match(tool, /富营养化风险上升/);
   assert.match(layout, /\/og-governance\.png/);
   assert.match(readme, /监测维护—公众参与/);
   assert.doesNotMatch(styles, /scroll-behavior:\s*smooth/);
   assert.match(styles, /grid-template-columns:\s*repeat\(5, 170px\)/);
   assert.match(styles, /touch-action:\s*pan-x pan-y/);
+  assert.match(styles, /\.water-assessment/);
+  assert.match(styles, /\.city-comparison/);
 
   await access(new URL("../public/og-governance.png", import.meta.url));
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));

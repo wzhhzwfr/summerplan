@@ -1,4 +1,5 @@
 import WaterReferenceTool from "./WaterReferenceTool";
+import ScrollButton from "./ScrollButton";
 
 const stats = [
   { value: "2", label: "天实地实践" },
@@ -212,6 +213,25 @@ const publicData = [
   },
 ];
 
+const cityComparison = [
+  {
+    city: "盐城",
+    year: "2025年度",
+    value: "100%",
+    title: "省考及以上断面优Ⅲ比例",
+    note: "17个国考断面和51个省考及以上断面，优Ⅲ比例持续保持100%。",
+    href: "https://wap.yancheng.gov.cn/art/2026/6/24/art_128_4433718.html",
+  },
+  {
+    city: "连云港",
+    year: "2025年度",
+    value: "95.6%",
+    title: "地表水达到或好于Ⅲ类比例",
+    note: "年度水环境总体评价为优，公开比例达到95.6%。",
+    href: "https://www.lyg.gov.cn/zglygzfmhwz/rdcl_lh2026/content/022099df-7170-4dcc-ad17-0e2a3cc98112.htm",
+  },
+];
+
 const localCases = [
   {
     place: "东海 / 赣榆 · 石梁河水库",
@@ -268,6 +288,26 @@ const sources = [
     title: "2026年6月连云港市地表水质量状况",
     note: "月度类别与时段波动",
     href: "https://www.lyg.gov.cn/zglygzfmhwz/hjzl/content/6dd80c21-95fc-4ef4-b062-f7fbf09f4222.html",
+  },
+  {
+    title: "2025年盐城市国民经济和社会发展统计公报",
+    note: "盐城年度国考、省考及以上断面优Ⅲ比例",
+    href: "https://wap.yancheng.gov.cn/art/2026/6/24/art_128_4433718.html",
+  },
+  {
+    title: "2025年6月盐城市地表水环境质量状况",
+    note: "盐城月度断面优Ⅲ比例与水质波动",
+    href: "https://www.yancheng.gov.cn/art/2025/9/25/art_23128_4383031.html",
+  },
+  {
+    title: "GB 5749—2022《生活饮用水卫生标准》",
+    note: "饮用水安全判断与检验项目依据",
+    href: "https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=99E9C17E3547A3C0CE2FD1FFD9F2F7BE",
+  },
+  {
+    title: "国家地表水监测“5+X”评价模式",
+    note: "五项基本指标与特征指标的组合评价思路",
+    href: "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk15/202012/t20201228_815116.html",
   },
   {
     title: "盐城滨海湿地景观格局与地表水质关联研究",
@@ -358,19 +398,19 @@ export default function Home() {
   return (
     <>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="返回页面顶部">
+        <ScrollButton className="brand" targetId="top" ariaLabel="返回页面顶部">
           <span className="brand-mark">林海</span>
           <span className="brand-copy">
             <strong>林海相依</strong>
             <small>从湿地观察到治理构想</small>
           </span>
-        </a>
+        </ScrollButton>
         <nav aria-label="页面导航">
-          <a href="#journey">真实实践</a>
-          <a href="#local">港城观察</a>
-          <a href="#governance">治理方案</a>
-          <a href="#tool">指标工具</a>
-          <a href="#data">公开证据</a>
+          <ScrollButton className="nav-scroll" targetId="journey">真实实践</ScrollButton>
+          <ScrollButton className="nav-scroll" targetId="local">港城观察</ScrollButton>
+          <ScrollButton className="nav-scroll" targetId="governance">治理方案</ScrollButton>
+          <ScrollButton className="nav-scroll" targetId="tool">指标工具</ScrollButton>
+          <ScrollButton className="nav-scroll" targetId="data">公开证据</ScrollButton>
         </nav>
       </header>
 
@@ -395,12 +435,12 @@ export default function Home() {
               两天里，我们走进黄海湿地博物馆、盐镇水街和中华麋鹿园，完成讲解采访、生境观察、水样采集和影像记录；回到连云港后，又把这些收获整理成一座可以浏览、互动的水环境宣传网页。
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#governance">
+              <ScrollButton className="button button-primary" targetId="governance">
                 查看治理方案
-              </a>
-              <a className="button button-ghost" href="#journey">
+              </ScrollButton>
+              <ScrollButton className="button button-ghost" targetId="journey">
                 回看真实实践
-              </a>
+              </ScrollButton>
             </div>
           </div>
           <div className="hero-meta">
@@ -577,9 +617,53 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="section-kicker">PUBLIC EVIDENCE</p>
-                <h2>从公开数据认识港城水环境</h2>
+                <h2>盐城与连云港：公开数据对照</h2>
               </div>
-              <p>把政府公开信息转化为清晰、易读的水环境知识。</p>
+              <p>把两座城市的政府公开信息放在同一页面，读懂年度进展与月度波动。</p>
+            </div>
+
+            <div className="city-comparison" aria-labelledby="city-comparison-title">
+              <div className="comparison-intro">
+                <div>
+                  <p className="section-kicker">SAME YEAR · TWO CITIES</p>
+                  <h3 id="city-comparison-title">同看2025年度，两座沿海城市的水环境成绩</h3>
+                </div>
+                <p>按两市各自政府公报发布的优Ⅲ比例对照。</p>
+              </div>
+              <div className="comparison-grid">
+                {cityComparison.map((item) => (
+                  <article className="comparison-city" key={item.city}>
+                    <div className="comparison-city-meta">
+                      <span>{item.city}</span>
+                      <small>{item.year}</small>
+                    </div>
+                    <strong>{item.value}</strong>
+                    <h4>{item.title}</h4>
+                    <p>{item.note}</p>
+                    <a href={item.href} target="_blank" rel="noreferrer">
+                      查看{item.city}官方数据 <span aria-hidden="true">↗</span>
+                    </a>
+                  </article>
+                ))}
+                <div className="comparison-difference" aria-label="两市公开比例相差4.4个百分点">
+                  <span>公开比例相差</span>
+                  <strong>4.4</strong>
+                  <small>个百分点</small>
+                </div>
+              </div>
+              <div className="comparison-monthly">
+                <strong>再看月度变化</strong>
+                <p>
+                  2025年6月，盐城51个省考及以上断面优Ⅲ比例为56.9%。年度值适合观察整体进展，月度值则能反映季节、流量和降雨带来的变化。
+                </p>
+                <a
+                  href="https://www.yancheng.gov.cn/art/2025/9/25/art_23128_4383031.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  查看盐城月度数据 <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
             <div className="data-grid">
               {publicData.map((item) => (
@@ -707,9 +791,9 @@ export default function Home() {
           <div className="section-shell closing-inner">
             <p>让一次暑期实践，成为持续关注水环境的开始。</p>
             <h2>从盐城湿地出发，我们期待让更多人看见身边的水、理解水、一起守护水。</h2>
-            <a className="button button-light" href="#top">
+            <ScrollButton className="button button-light" targetId="top">
               回到开头
-            </a>
+            </ScrollButton>
           </div>
         </section>
       </main>
