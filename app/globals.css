@@ -95,6 +95,19 @@ dd {
   gap: 12px;
 }
 
+.scroll-control {
+  cursor: pointer;
+  font: inherit;
+}
+
+.brand.scroll-control {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  text-align: left;
+}
+
 .brand-mark {
   display: grid;
   place-items: center;
@@ -134,13 +147,15 @@ dd {
   letter-spacing: 0.06em;
 }
 
-.site-header nav a {
+.site-header nav .nav-scroll {
   position: relative;
   padding: 10px 0;
   color: rgba(255, 255, 255, 0.82);
+  background: transparent;
+  border: 0;
 }
 
-.site-header nav a::after {
+.site-header nav .nav-scroll::after {
   content: "";
   position: absolute;
   left: 0;
@@ -151,8 +166,8 @@ dd {
   transition: right 180ms ease;
 }
 
-.site-header nav a:hover::after,
-.site-header nav a:focus-visible::after {
+.site-header nav .nav-scroll:hover::after,
+.site-header nav .nav-scroll:focus-visible::after {
   right: 0;
 }
 
@@ -266,6 +281,7 @@ dd {
   border-radius: 999px;
   font-size: 14px;
   font-weight: 750;
+  cursor: pointer;
   transition: transform 180ms ease, background 180ms ease, color 180ms ease;
 }
 
@@ -1090,7 +1106,7 @@ button:focus-visible {
   }
 
   .brand-copy small,
-  .site-header nav a:not(:first-child) {
+  .site-header nav .nav-scroll:not(:first-child) {
     display: none;
   }
 
@@ -1756,6 +1772,189 @@ button:focus-visible {
   background: #f0d8d2;
 }
 
+.water-assessment {
+  padding: 38px 40px 42px;
+  border-top: 1px solid var(--line);
+  background: #f8f7f2;
+}
+
+.assessment-heading {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.34fr) minmax(260px, 0.66fr);
+  column-gap: 34px;
+  align-items: baseline;
+}
+
+.assessment-heading > p {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+
+.assessment-heading h4 {
+  grid-column: 2;
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.35;
+}
+
+.assessment-heading > span {
+  grid-column: 2;
+  margin-top: 10px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.assessment-good .assessment-heading h4 {
+  color: #155c42;
+}
+
+.assessment-watch .assessment-heading h4,
+.assessment-alert .assessment-heading h4 {
+  color: #7b352d;
+}
+
+.assessment-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.5fr);
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.assessment-findings,
+.drinking-verdict {
+  background: var(--white);
+  border: 1px solid rgba(19, 37, 32, 0.1);
+  border-radius: 4px 24px 4px 4px;
+}
+
+.assessment-subhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 58px;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.assessment-subhead strong {
+  font-size: 13px;
+}
+
+.assessment-subhead span {
+  padding: 6px 9px;
+  color: var(--teal);
+  background: rgba(10, 92, 88, 0.08);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.assessment-finding {
+  padding: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.assessment-finding:last-child {
+  border-bottom: 0;
+}
+
+.assessment-finding h5 {
+  margin: 0;
+  color: #7b352d;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.assessment-finding dl {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.assessment-finding dl > div {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 12px;
+}
+
+.assessment-finding dt {
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.assessment-finding dd {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.assessment-good-note {
+  padding: 26px 24px 30px;
+}
+
+.assessment-good-note strong {
+  color: #155c42;
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-size: 20px;
+}
+
+.assessment-good-note p {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.drinking-verdict {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px;
+  color: var(--white);
+  background: var(--teal-deep);
+  border-color: transparent;
+}
+
+.drinking-verdict > p {
+  color: var(--aqua);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+
+.drinking-verdict > strong {
+  margin-top: 18px;
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+.drinking-verdict > span {
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.drinking-verdict a {
+  display: inline-flex;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 28px;
+  color: var(--aqua);
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .tool-disclaimer {
   padding: 24px 40px;
   color: #684c3c;
@@ -1831,6 +2030,175 @@ button:focus-visible {
   line-height: 1.6;
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.city-comparison {
+  margin-top: 76px;
+  padding: 42px;
+  color: var(--white);
+  background: var(--teal-deep);
+  border-radius: 4px 38px 4px 4px;
+  box-shadow: 0 30px 78px rgba(7, 60, 61, 0.18);
+}
+
+.comparison-intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 42px;
+}
+
+.comparison-intro .section-kicker {
+  color: var(--aqua);
+}
+
+.comparison-intro h3 {
+  max-width: 760px;
+  margin-top: 12px;
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.25;
+}
+
+.comparison-intro > p {
+  max-width: 310px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.comparison-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.comparison-city {
+  min-height: 360px;
+  padding: 30px;
+  color: var(--ink);
+  background: var(--paper);
+  border-radius: 4px 28px 4px 4px;
+}
+
+.comparison-city-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.comparison-city-meta span {
+  color: var(--teal);
+  font-size: 14px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.comparison-city-meta small {
+  color: var(--ink-soft);
+  font-size: 10px;
+}
+
+.comparison-city > strong {
+  display: block;
+  margin-top: 38px;
+  color: var(--teal);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(54px, 6vw, 82px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.comparison-city h4 {
+  margin-top: 14px;
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-size: 21px;
+  line-height: 1.45;
+}
+
+.comparison-city > p {
+  margin-top: 15px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.comparison-city a,
+.comparison-monthly a {
+  display: inline-flex;
+  gap: 7px;
+  margin-top: 24px;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.comparison-difference {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: grid;
+  width: 116px;
+  height: 116px;
+  place-content: center;
+  text-align: center;
+  color: var(--teal-deep);
+  background: var(--aqua);
+  border: 8px solid var(--teal-deep);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.comparison-difference span,
+.comparison-difference small {
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.comparison-difference strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.comparison-monthly {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) auto;
+  gap: 26px;
+  align-items: center;
+  margin-top: 14px;
+  padding: 24px 28px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px 18px 4px 4px;
+}
+
+.comparison-monthly > strong {
+  color: var(--aqua);
+  font-size: 13px;
+}
+
+.comparison-monthly > p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.comparison-monthly a {
+  margin-top: 0;
+  color: var(--aqua);
+  white-space: nowrap;
+}
+
+.city-comparison + .data-grid {
+  margin-top: 44px;
 }
 
 .case-heading {
@@ -2103,6 +2471,30 @@ button:focus-visible {
   .results-summary button {
     margin: 0 0 0 auto;
   }
+
+  .assessment-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .assessment-heading > p,
+  .assessment-heading h4,
+  .assessment-heading > span {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .assessment-heading h4 {
+    margin-top: 12px;
+  }
+
+  .assessment-body {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-monthly {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -2116,11 +2508,11 @@ button:focus-visible {
     padding-bottom: 94px;
   }
 
-  .site-header nav a {
+  .site-header nav .nav-scroll {
     display: none;
   }
 
-  .site-header nav a[href="#local"] {
+  .site-header nav .nav-scroll:nth-child(2) {
     display: inline-block;
   }
 
@@ -2192,6 +2584,10 @@ button:focus-visible {
     padding: 28px 22px;
   }
 
+  .water-assessment {
+    padding: 28px 22px 30px;
+  }
+
   .water-type-switch {
     align-items: stretch;
     flex-direction: column;
@@ -2221,6 +2617,40 @@ button:focus-visible {
 
   .tool-disclaimer {
     padding: 22px;
+  }
+
+  .assessment-finding dl > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .city-comparison {
+    margin-top: 56px;
+    padding: 28px 22px;
+  }
+
+  .comparison-intro {
+    align-items: start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .comparison-difference {
+    position: static;
+    width: 100%;
+    height: auto;
+    grid-template-columns: auto auto auto;
+    gap: 8px;
+    align-items: baseline;
+    padding: 12px;
+    border: 0;
+    border-radius: 4px 16px 4px 4px;
+    transform: none;
   }
 
   .replication-note {
