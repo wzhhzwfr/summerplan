@@ -46,7 +46,8 @@ test("server-renders the complete practice and outreach outcome", async () => {
   assert.match(html, /盐城与连云港：公开数据对照/);
   assert.match(html, /100%/);
   assert.match(html, /4\.4/);
-  assert.match(html, /2025年6月，盐城51个省考及以上断面优Ⅲ比例为56\.9%/);
+  assert.match(html, /2025年6月单月，盐城51个省考及以上断面优Ⅲ比例为56\.9%；1—6月累计比例为96\.1%/);
+  assert.match(html, /进入盐城水质监测栏目/);
   assert.match(html, /水质指标互动展示/);
   assert.match(html, /填满5项后，生成水体综合解读/);
   assert.match(html, /从盐城湿地出发/);

@@ -213,6 +213,9 @@ const publicData = [
   },
 ];
 
+const yanchengWaterMonitoringUrl =
+  "https://www.yancheng.gov.cn/col/col23128/index.html?number=A00038A00005A00003";
+
 const cityComparison = [
   {
     city: "盐城",
@@ -295,9 +298,9 @@ const sources = [
     href: "https://wap.yancheng.gov.cn/art/2026/6/24/art_128_4433718.html",
   },
   {
-    title: "2025年6月盐城市地表水环境质量状况",
-    note: "盐城月度断面优Ⅲ比例与水质波动",
-    href: "https://www.yancheng.gov.cn/art/2025/9/25/art_23128_4383031.html",
+    title: "盐城市水质监测栏目（含2025年6月情况）",
+    note: "盐城市政府水质监测栏目；原文章直达地址可能因改版失效",
+    href: yanchengWaterMonitoringUrl,
   },
   {
     title: "GB 5749—2022《生活饮用水卫生标准》",
@@ -654,14 +657,14 @@ export default function Home() {
               <div className="comparison-monthly">
                 <strong>再看月度变化</strong>
                 <p>
-                  2025年6月，盐城51个省考及以上断面优Ⅲ比例为56.9%。年度值适合观察整体进展，月度值则能反映季节、流量和降雨带来的变化。
+                  2025年6月单月，盐城51个省考及以上断面优Ⅲ比例为56.9%；1—6月累计比例为96.1%。年度值适合观察整体进展，单月值则能反映季节、流量和降雨带来的变化。
                 </p>
                 <a
-                  href="https://www.yancheng.gov.cn/art/2025/9/25/art_23128_4383031.html"
+                  href={yanchengWaterMonitoringUrl}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  查看盐城月度数据 <span aria-hidden="true">↗</span>
+                  进入盐城水质监测栏目 <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </div>
