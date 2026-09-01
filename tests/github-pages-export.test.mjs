@@ -8,6 +8,9 @@ test("exports the full outcome page for GitHub Pages", async () => {
   assert.match(html, /连云港小微水体护水构想/);
   assert.match(html, /三张港城照片，三种身边水环境/);
   assert.match(html, /把实践收获做成一份数字成果/);
+  assert.match(html, /五个样点，把现场观察变成可比较的数据/);
+  assert.match(html, /S1—S5/);
+  assert.match(html, /4人走进现场，8人共同完成成果/);
   assert.match(html, /WaterReferenceTool-[^\"]+\.js/);
   assert.match(html, /ScrollButton-[^\"]+\.js/);
   assert.match(html, /盐城与连云港：公开数据对照/);
