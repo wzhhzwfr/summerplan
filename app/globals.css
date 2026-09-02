@@ -113,6 +113,15 @@ html {
   touch-action: pan-x pan-y;
 }
 
+.sample-table-wrap:focus-visible {
+  outline: 3px solid var(--aqua);
+  outline-offset: -3px;
+}
+
+.sample-scroll-hint {
+  display: none;
+}
+
 .sample-table {
   width: 100%;
   min-width: 850px;
@@ -346,6 +355,14 @@ html {
     padding: 0 24px;
   }
 
+  .sample-scroll-hint {
+    display: block;
+    padding: 16px 24px 0;
+    color: var(--aqua);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
   .sample-do-chart {
     grid-template-columns: 1fr;
     padding: 28px 24px 34px;
@@ -353,6 +370,13 @@ html {
 
   .sample-chart-title {
     grid-column: auto;
+  }
+
+  .brand.scroll-control,
+  .site-header nav .nav-scroll,
+  .results-summary button {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 

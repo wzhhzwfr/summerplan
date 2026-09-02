@@ -107,7 +107,15 @@ export default function SampleDataSection() {
             <p>pH无量纲，其余指标单位均为mg/L。</p>
           </div>
 
-          <div className="sample-table-wrap">
+          <p className="sample-scroll-hint" aria-hidden="true">
+            ← 左右滑动查看全部指标 →
+          </p>
+          <div
+            className="sample-table-wrap"
+            role="region"
+            aria-label="S1至S5样点数据，可左右滑动查看全部指标"
+            tabIndex={0}
+          >
             <table className="sample-table">
               <caption>林海相依实践团S1至S5样点记录数据</caption>
               <thead>
