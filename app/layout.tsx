@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = `${protocol}://${host}`;
   const title = "林海相依｜盐城湿地实践与港城护水行动";
   const description =
-    "江苏海洋大学“林海相依”实践团：盐城湿地实践、连云港在地观察、水质指标互动展示与港城护水构想。";
+    "江苏海洋大学“林海相依”实践团：4人盐城现场调研、8人团队协作、S1—S5五样点数据、连云港在地观察与港城护水构想。";
 
   return {
     title,

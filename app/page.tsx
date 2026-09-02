@@ -1,11 +1,12 @@
 import WaterReferenceTool from "./WaterReferenceTool";
 import ScrollButton from "./ScrollButton";
+import SampleDataSection from "./SampleDataSection";
 
 const stats = [
   { value: "2", label: "天实地实践" },
-  { value: "4", label: "名团队成员" },
-  { value: "2", label: "份水样记录" },
-  { value: "1", label: "次讲解员采访" },
+  { value: "4", label: "人现场调研" },
+  { value: "8", label: "人团队协作" },
+  { value: "5", label: "个样点记录" },
 ];
 
 const journey = [
@@ -15,10 +16,10 @@ const journey = [
     title: "在博物馆建立观察坐标",
     place: "中国黄海湿地博物馆",
     description:
-      "跟随讲解员了解潮间带、候鸟迁徙与湿地保护，并围绕展陈和公众科普完成简短采访。离馆后继续观察周边浅水水面、岸带植物与公共步道。",
+      "跟随讲解员了解潮间带、候鸟迁徙与湿地保护，并围绕展陈和公众科普完成简短采访。离馆后在旁侧公园完成S1、S2两个样点的观察与记录。",
     image: "/wetland-observation.jpg",
     alt: "队员在博物馆周边观察湿地植物",
-    tags: ["展陈学习", "采访记录", "生境观察"],
+    tags: ["展陈学习", "采访记录", "S1—S2"],
   },
   {
     number: "02",
@@ -26,10 +27,10 @@ const journey = [
     title: "从自然史走进城市生活史",
     place: "竹林大饭店 · 盐镇水街",
     description:
-      "在竹林大饭店感受老盐城市井文化，随后沿串场河步行、观看水街夜景，在城市生活中体会水系与地方文化的联系。",
+      "在竹林大饭店感受老盐城市井文化，随后沿串场河步行、观看水街夜景，并在城市景观河道设置S5样点，记录水系与地方生活的联系。",
     image: "/water-street.jpg",
     alt: "盐镇水街串场河沿线夜景",
-    tags: ["城市水文化", "团队复盘", "地方记忆"],
+    tags: ["城市水文化", "地方记忆", "S5"],
   },
   {
     number: "03",
@@ -37,21 +38,21 @@ const journey = [
     title: "从“看麋鹿”转向“看生境”",
     place: "中华麋鹿园",
     description:
-      "镜头不只追随麋鹿，也记录林地、草地、浅水和泥滩。我们由此认识到，物种保护必须与饮水、取食、隐蔽和繁殖所依赖的完整生境一起理解。",
+      "镜头不只追随麋鹿，也记录林地、草地、浅水和泥滩；S3、S4分别对应两处不同水体，让物种保护与水生境观察落到具体点位。",
     image: "/milu-habitat.jpg",
     alt: "中华麋鹿园内的麋鹿及其林草生境",
-    tags: ["物种保护", "栖息地", "水生态"],
+    tags: ["物种保护", "栖息地", "S3—S4"],
   },
   {
     number: "04",
-    date: "7月27日 · 中午",
-    title: "留下两份可追溯的水样记录",
-    place: "麋鹿园公共游览区域",
+    date: "7月27日 · 下午",
+    title: "统一整理五个样点的记录",
+    place: "盐城三处实践场景",
     description:
-      "在工作人员同意下，于景观湖和相邻排水沟各取一份水样，记录来源和采样过程。两处水体状态的差异，让队员开始关注水体交换、岸边环境和日常管理。",
+      "将S1—S5的点位信息和pH、溶解氧、总氮、氨氮、总磷统一整理，形成可横向查看的五样点数据表，并标记需要继续复测的点位。",
     image: "/pond-sampling.jpg",
     alt: "队员在景观湖边采集水样",
-    tags: ["水样采集", "过程记录", "问题观察"],
+    tags: ["五项指标", "数据整理", "复测重点"],
   },
 ];
 
@@ -114,15 +115,21 @@ const localObservations = [
 
 const outcomes = [
   {
-    type: "文字",
-    title: "实践报告与新闻稿",
-    detail: "整理真实行程、采访内容、采样过程和实践感受。",
+    type: "数据",
+    title: "五样点记录与对照图",
+    detail: "整理S1—S5的位置、现场特征及五项指标，呈现样点间差异。",
     status: "已完成",
   },
   {
-    type: "记录",
-    title: "现场照片与采访视频",
-    detail: "记录博物馆学习、湿地观察、麋鹿生境和水样采集。",
+    type: "文字",
+    title: "实践报告、新闻稿与七日日志",
+    detail: "将两天实地实践和后续材料整理连成完整的七天成果链。",
+    status: "已完成",
+  },
+  {
+    type: "展示",
+    title: "汇报PPT与现场影像",
+    detail: "用路线、照片、样点数据和行动建议呈现团队实践过程。",
     status: "已整理",
   },
   {
@@ -410,6 +417,7 @@ export default function Home() {
         </ScrollButton>
         <nav aria-label="页面导航">
           <ScrollButton className="nav-scroll" targetId="journey">真实实践</ScrollButton>
+          <ScrollButton className="nav-scroll" targetId="samples">样点数据</ScrollButton>
           <ScrollButton className="nav-scroll" targetId="local">港城观察</ScrollButton>
           <ScrollButton className="nav-scroll" targetId="governance">治理方案</ScrollButton>
           <ScrollButton className="nav-scroll" targetId="tool">指标工具</ScrollButton>
@@ -435,14 +443,14 @@ export default function Home() {
               <span>走向港城小微水体方案</span>
             </h1>
             <p className="hero-lead">
-              两天里，我们走进黄海湿地博物馆、盐镇水街和中华麋鹿园，完成讲解采访、生境观察、水样采集和影像记录；回到连云港后，又把这些收获整理成一座可以浏览、互动的水环境宣传网页。
+              两天里，4名现场成员走进黄海湿地博物馆、盐镇水街和中华麋鹿园，完成讲解采访、生境观察、五个样点记录和影像采集；8名队员共同把数据、报告与行动建议整理成可浏览、可互动的数字成果。
             </p>
             <div className="hero-actions">
               <ScrollButton className="button button-primary" targetId="governance">
                 查看治理方案
               </ScrollButton>
-              <ScrollButton className="button button-ghost" targetId="journey">
-                回看真实实践
+              <ScrollButton className="button button-ghost" targetId="samples">
+                查看样点数据
               </ScrollButton>
             </div>
           </div>
@@ -462,9 +470,9 @@ export default function Home() {
               </div>
             ))}
             <p className="stats-note">
-              从现场出发，
+              从五个样点出发，
               <br />
-              把收获做成成果。
+              把观察变成成果。
             </p>
           </div>
         </section>
@@ -475,7 +483,7 @@ export default function Home() {
             <h2 id="manifesto-title">把实践收获做成一份数字成果</h2>
           </div>
           <p>
-            团队将盐城路线、采访影像、水样记录、连云港本地照片和公开资料集中到网页中，形成实践回顾、港城观察、护水构想和指标互动四个板块，让两天的所见所闻变成可展示、可传播、可继续完善的实践成果。
+            团队将盐城路线、采访影像、S1—S5样点数据、连云港本地照片和公开资料集中到网页中，形成实践回顾、数据对照、港城观察、护水构想和指标互动，让两天的现场行动与后续材料整理成为一份可展示、可传播的数字成果。
           </p>
         </section>
 
@@ -512,6 +520,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <SampleDataSection />
 
         <section className="insights section-shell" aria-labelledby="insights-title">
           <div className="section-heading insights-heading">
@@ -607,9 +617,9 @@ export default function Home() {
             <div className="section-heading">
               <div>
                 <p className="section-kicker">INDICATOR REFERENCE</p>
-                <h2>水质指标互动展示</h2>
+                <h2>标准学习与指标互动工具</h2>
               </div>
-              <p>输入数据，直观看懂pH、溶解氧、氨氮、总磷和高锰酸盐指数。</p>
+              <p>该工具用于认识常见地表水指标与参考线；它与上方S1—S5样点表分开展示，不直接给样点定级。</p>
             </div>
             <WaterReferenceTool />
           </div>
@@ -782,9 +792,9 @@ export default function Home() {
           </div>
           <div className="team-copy">
             <p className="section-kicker">THE TEAM</p>
-            <h2 id="team-title">四个人，把两天的收获带回港城</h2>
+            <h2 id="team-title">4人走进现场，8人共同完成成果</h2>
             <p>
-              吴子恒、薛润泽、燕先喆、薄玙彤共同完成路线协调、现场记录、采访拍摄、水样采集、材料整理和网页制作。
+              吴子恒、薛润泽、燕先喆、薄玙彤完成盐城现场调研；马信易、王诗源、钱嘉成、张子玉共同参与资料整理与成果制作。团队协作完成采访拍摄、样点记录、报告撰写、PPT汇报和网页建设。
             </p>
             <p className="team-school">江苏海洋大学 · 马卡洛夫海洋工程学院</p>
           </div>
@@ -805,7 +815,7 @@ export default function Home() {
         <div className="section-shell footer-inner">
           <div>
             <strong>“林海相依”实践团</strong>
-            <p>盐城湿地实践记录 · 连云港小微水体治理构想</p>
+            <p>盐城五样点实践记录 · 连云港小微水体护水构想</p>
           </div>
           <p>盐城 × 连云港 · 2026</p>
         </div>

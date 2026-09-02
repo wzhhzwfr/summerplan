@@ -35,6 +35,13 @@ test("server-renders the complete practice and outreach outcome", async () => {
   );
   assert.match(html, /三张港城照片，三种身边水环境/);
   assert.match(html, /把实践收获做成一份数字成果/);
+  assert.match(html, /五个样点，把现场观察变成可比较的数据/);
+  assert.match(html, /博物馆旁公园·点1/);
+  assert.match(html, /中华麋鹿园·点2/);
+  assert.match(html, /盐镇水街/);
+  assert.match(html, /7\.62/);
+  assert.match(html, /1\.68/);
+  assert.match(html, /4人走进现场，8人共同完成成果/);
   assert.match(html, /校园周边河道｜从身边小河开始/);
   assert.match(html, /连云港小微水体护水构想/);
   assert.match(html, /源头减量/);
@@ -48,7 +55,7 @@ test("server-renders the complete practice and outreach outcome", async () => {
   assert.match(html, /4\.4/);
   assert.match(html, /2025年6月单月，盐城51个省考及以上断面优Ⅲ比例为56\.9%；1—6月累计比例为96\.1%/);
   assert.match(html, /进入盐城水质监测栏目/);
-  assert.match(html, /水质指标互动展示/);
+  assert.match(html, /标准学习与指标互动工具/);
   assert.match(html, /填满5项后，生成水体综合解读/);
   assert.match(html, /从盐城湿地出发/);
   assert.doesNotMatch(html, /一段必须说清的方法边界/);
@@ -68,6 +75,7 @@ test("keeps the indicator tool, positive outcomes and metadata wired", async () 
   assert.match(page, /import WaterReferenceTool from "\.\/WaterReferenceTool"/);
   assert.match(page, /import ScrollButton from "\.\/ScrollButton"/);
   assert.match(page, /<WaterReferenceTool \/>/);
+  assert.match(page, /<SampleDataSection \/>/);
   assert.doesNotMatch(page, /href="#/);
   assert.match(page, /水环境宣传网页/);
   assert.match(tool, /^"use client";/);
@@ -84,6 +92,8 @@ test("keeps the indicator tool, positive outcomes and metadata wired", async () 
   assert.match(styles, /touch-action:\s*pan-x pan-y/);
   assert.match(styles, /\.water-assessment/);
   assert.match(styles, /\.city-comparison/);
+  assert.match(styles, /\.sample-data-panel/);
+  assert.match(styles, /\.sample-table-wrap/);
 
   await access(new URL("../public/og-governance.png", import.meta.url));
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
